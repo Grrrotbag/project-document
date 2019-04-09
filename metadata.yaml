@@ -1,0 +1,36 @@
+---
+# author: Gerard Keane
+# title: Document Title
+# date: \today
+lot: false
+toc: false
+lof: false
+mainfont: "Hoefler Text"
+sansfont: "Helvetica Neue"
+monofont: "Fira Code"
+fontsize: 12pt
+colorlinks: true
+links-as-notes: true
+geometry: [top=3cm, bottom=3cm, left=3cm, right=3cm]
+header-includes:
+  # Font setup
+  - \newfontfamily\headingfont[]{Gill Sans}
+  - \newfontfamily\dropcapfont[]{Helvetica Neue}
+  # Setting The Title Styling to Gill Sans
+  - \usepackage{titling}
+  - \pretitle{\begin{center}\bfseries\headingfont\Huge\MakeUppercase}
+  - \posttitle{\end{center}\vspace{2em}}
+  # Setting the section heading styling to Helvetica
+  - \usepackage{sectsty}
+  - \allsectionsfont{\sffamily}
+  # For Drop Caps / Lettrines
+  - \usepackage{lettrine}
+  - \renewcommand{\LettrineFontHook}{\dropcapfont\bfseries}  # {\color{BrickRed}\headingfont}
+  # Lorem Ipsum Generator for helping layout document
+  - \usepackage{lipsum}
+include-before:
+# Puts the table of contents / list of tables on a separate page from the title page
+- '`\newpage{}`{=latex}'
+---
+
+\newpage
